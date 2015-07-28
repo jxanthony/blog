@@ -1,0 +1,20 @@
+<h1>New Articles for my Sam Blog</h1>
+
+<br>
+<h2>All things Sam</h2>
+<br>
+<%= form_for :article, url: articles_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
