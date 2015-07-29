@@ -1,9 +1,11 @@
 <p>
-  <strong>Title:</strong>
+  <strong>Title of your blog post:</strong>
   <%= @article.title %>
 </p>
  
 <p>
-  <strong>Text:</strong>
+  <strong>Body:</strong>
   <%= @article.text %>
 </p>
+
+<%= link_to 'Back to list of Articles', articles_path %>
