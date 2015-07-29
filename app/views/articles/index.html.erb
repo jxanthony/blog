@@ -1,0 +1,17 @@
+<h1>blogicles.... articles</h1>
+
+<%= link_to 'Click here to write a new blog entry', new_article_path %>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+    </tr>
+  <% end %>
+</table>

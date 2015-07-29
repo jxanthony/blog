@@ -17,4 +17,12 @@
   <p>
     <%= f.submit %>
   </p>
+
+<%= form_for :article, url: articles_path do |f| %>
+
+<% end %>
+ 
+<br><br>
+<%= link_to 'Back to previous page', articles_path %>
+
 <% end %>
