@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def edit
@@ -19,7 +20,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if  @article.save
-      redirect_to @article
+      redirect_to @article, :notice => "Your post was saved"
     else
       render 'new'
     end
@@ -33,6 +34,13 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+ 
+    redirect_to articles_path
   end
 
   private
